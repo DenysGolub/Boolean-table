@@ -1,0 +1,7 @@
+C:\Users\Denys\Desktop\Logic\LogicForDenis\sets_start\bin\Debug\fromLKN.exe.config
+C:\Users\Denys\Desktop\Logic\LogicForDenis\sets_start\bin\Debug\fromLKN.exe
+C:\Users\Denys\Desktop\Logic\LogicForDenis\sets_start\bin\Debug\fromLKN.pdb
+C:\Users\Denys\Desktop\Logic\LogicForDenis\sets_start\obj\Debug\sets_start.csproj.AssemblyReference.cache
+C:\Users\Denys\Desktop\Logic\LogicForDenis\sets_start\obj\Debug\sets_start.csproj.CoreCompileInputs.cache
+C:\Users\Denys\Desktop\Logic\LogicForDenis\sets_start\obj\Debug\fromLKN.exe
+C:\Users\Denys\Desktop\Logic\LogicForDenis\sets_start\obj\Debug\fromLKN.pdb

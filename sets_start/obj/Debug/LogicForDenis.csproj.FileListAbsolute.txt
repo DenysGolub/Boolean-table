@@ -1,0 +1,15 @@
+D:\ПтаАМ\LogicForDenis\LogicForDenis\bin\Debug\fromLKN.exe.config
+D:\ПтаАМ\LogicForDenis\LogicForDenis\bin\Debug\fromLKN.exe
+D:\ПтаАМ\LogicForDenis\LogicForDenis\bin\Debug\fromLKN.pdb
+D:\ПтаАМ\LogicForDenis\LogicForDenis\obj\Debug\LogicForDenis.csproj.AssemblyReference.cache
+D:\ПтаАМ\LogicForDenis\LogicForDenis\obj\Debug\LogicForDenis.csproj.SuggestedBindingRedirects.cache
+D:\ПтаАМ\LogicForDenis\LogicForDenis\obj\Debug\LogicForDenis.csproj.CoreCompileInputs.cache
+D:\ПтаАМ\LogicForDenis\LogicForDenis\obj\Debug\fromLKN.exe
+D:\ПтаАМ\LogicForDenis\LogicForDenis\obj\Debug\fromLKN.pdb
+C:\Users\Denys\Desktop\LogicForDenis\LogicForDenis\bin\Debug\fromLKN.exe.config
+C:\Users\Denys\Desktop\LogicForDenis\LogicForDenis\bin\Debug\fromLKN.exe
+C:\Users\Denys\Desktop\LogicForDenis\LogicForDenis\bin\Debug\fromLKN.pdb
+C:\Users\Denys\Desktop\LogicForDenis\LogicForDenis\obj\Debug\LogicForDenis.csproj.AssemblyReference.cache
+C:\Users\Denys\Desktop\LogicForDenis\LogicForDenis\obj\Debug\LogicForDenis.csproj.CoreCompileInputs.cache
+C:\Users\Denys\Desktop\LogicForDenis\LogicForDenis\obj\Debug\fromLKN.exe
+C:\Users\Denys\Desktop\LogicForDenis\LogicForDenis\obj\Debug\fromLKN.pdb

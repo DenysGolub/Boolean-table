@@ -1,0 +1,14 @@
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\bin\Debug\netcoreapp3.1\boolean_table.exe
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\bin\Debug\netcoreapp3.1\boolean_table.deps.json
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\bin\Debug\netcoreapp3.1\boolean_table.runtimeconfig.json
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\bin\Debug\netcoreapp3.1\boolean_table.runtimeconfig.dev.json
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\bin\Debug\netcoreapp3.1\boolean_table.dll
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\bin\Debug\netcoreapp3.1\boolean_table.pdb
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\obj\Debug\netcoreapp3.1\boolean_table.csproj.AssemblyReference.cache
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\obj\Debug\netcoreapp3.1\boolean_table.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\obj\Debug\netcoreapp3.1\boolean_table.AssemblyInfoInputs.cache
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\obj\Debug\netcoreapp3.1\boolean_table.AssemblyInfo.cs
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\obj\Debug\netcoreapp3.1\boolean_table.csproj.CoreCompileInputs.cache
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\obj\Debug\netcoreapp3.1\boolean_table.dll
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\obj\Debug\netcoreapp3.1\boolean_table.pdb
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table\obj\Debug\netcoreapp3.1\boolean_table.genruntimeconfig.cache

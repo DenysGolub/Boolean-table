@@ -1,0 +1,14 @@
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\bin\Debug\netcoreapp3.1\boolean_table_work_without_brackets.exe
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\bin\Debug\netcoreapp3.1\boolean_table_work_without_brackets.deps.json
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\bin\Debug\netcoreapp3.1\boolean_table_work_without_brackets.runtimeconfig.json
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\bin\Debug\netcoreapp3.1\boolean_table_work_without_brackets.runtimeconfig.dev.json
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\bin\Debug\netcoreapp3.1\boolean_table_work_without_brackets.dll
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\bin\Debug\netcoreapp3.1\boolean_table_work_without_brackets.pdb
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\obj\Debug\netcoreapp3.1\boolean_table_work_without_brackets.csproj.AssemblyReference.cache
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\obj\Debug\netcoreapp3.1\boolean_table_work_without_brackets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\obj\Debug\netcoreapp3.1\boolean_table_work_without_brackets.AssemblyInfoInputs.cache
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\obj\Debug\netcoreapp3.1\boolean_table_work_without_brackets.AssemblyInfo.cs
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\obj\Debug\netcoreapp3.1\boolean_table_work_without_brackets.csproj.CoreCompileInputs.cache
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\obj\Debug\netcoreapp3.1\boolean_table_work_without_brackets.dll
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\obj\Debug\netcoreapp3.1\boolean_table_work_without_brackets.pdb
+C:\Users\Denys\Desktop\Logic\LogicForDenis\boolean_table_work_without_brackets\obj\Debug\netcoreapp3.1\boolean_table_work_without_brackets.genruntimeconfig.cache
