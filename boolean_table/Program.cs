@@ -8,17 +8,23 @@ namespace fromLKN
 {
     class Program
     {
-        static string GetASet(int number, int length)
+        /*Returns the binary from of the length n for the decimal d*/
+        static string GetBinaryForm(int decim, int targetLength)
         {
-            return Convert.ToString(number, 2).PadLeft(length, '0');
+            string shortBinaryForm = Convert.ToString(decim, 2);
+            return shortBinaryForm.PadLeft(targetLength, '0');
         }
 
+        /*Replaces all 'vars' in 'formula' with corresponding binary 'values'
+         represented as string of 0s and 1s*/
         static string GetFormulaForSet(string formula, string vars, string set)
         {
             for (int i = 0; i < vars.Length; i++)
                 formula = formula.Replace(vars[i], set[i]);
             return formula;
         }
+
+        /*Returns all vars that appears in formula in one copy*/
         static string GetVarsForSet(string formula)
         {
             formula = formula.Replace("(", "").Replace(")", "");
@@ -35,19 +41,7 @@ namespace fromLKN
             return resultstring;
         }
 
-        static string GetTableFromVars(string formula, string varstotal)
-        {
-            formula = formula.Replace("(", "").Replace(")", "");
-
-            string pattern = @"¬|˄|v|→|⇔|↑|↓|⊕";
-            Regex regex = new Regex(pattern);
-            string vars = regex.Replace(formula, "");
-            string resultstring = vars.Substring(0, varstotal.Length);
-            return resultstring;
-        }
-
-        //Operations             string operations = "¬˄v→⇔↑↓⊕";
-
+        /*Return new formula which performed actions (replaces) according to the "symbol" */
 
         static string GetResultForOperationsInFormula(string formula, char symbol)
         {
@@ -56,32 +50,38 @@ namespace fromLKN
             switch (symb)
             {
                 case "¬":
-                    formula = Zaperech(formula, symb);
+                    formula = LogicalNO(formula);
                     break;
                 case "˄":
-                    formula = Conjuction(formula, symb);
+                    formula = Conjuction(formula);
                     break;
                 case "v":
-                    formula = Disjunction(formula, symb);
+                    formula = Disjunction(formula);
                     break;
                 case "→":
-                    formula = Implication(formula, symb);
+                    formula = Implication(formula);
                     break;
                 case "⇔":
-                    formula = Equivalence(formula, symb);
+                    formula = Equivalence(formula);
                     break;
                 case "↑":
-                    formula = Sheffler(formula, symb);
+                    formula = Sheffler(formula);
                     break;
                 case "↓":
-                    formula = Pirs(formula, symb);
+                    formula = Pirs(formula);
                     break;
                 case "⊕":
-                    formula = XOR(formula, symb);
+                    formula = XOR(formula);
                     break;
             }
             return formula;
         }
+
+        /*Returns the substrings enclosed in parentheses
+         example: Av((B^C)v(AvC))
+         1) AvC
+         2) B^C
+         3) (B^C)v(AvC) */
 
         private static IEnumerable<String> Brackets(string value)
         {
@@ -89,7 +89,6 @@ namespace fromLKN
                 yield break; // or throw exception
 
             Stack<int> brackets = new Stack<int>();
-            var sb = new StringBuilder(value);
 
             for (int i = 0; i < value.Length; ++i)
             {
@@ -108,7 +107,10 @@ namespace fromLKN
             yield return value;
         }
 
-        static string Zaperech(string formula, string symb)
+        /*START BLOCK WITH LOGICAL OPERATIONS
+         in this block, the methods return a formula in which replaces are made according to the symbol
+         and logical table for each logical operation. Name of methods == logical operation. */
+        static string LogicalNO(string formula)
         {
             var sb = new StringBuilder(formula);
 
@@ -135,7 +137,7 @@ namespace fromLKN
             return formula_new;
         }
 
-        static string Conjuction(string formula, string symb)
+        static string Conjuction(string formula)
         {
             var sb = new StringBuilder(formula);
 
@@ -154,7 +156,7 @@ namespace fromLKN
             return formula;
         }
 
-        static string Disjunction(string formula, string symb)
+        static string Disjunction(string formula)
         {
             var sb = new StringBuilder(formula);
 
@@ -173,7 +175,7 @@ namespace fromLKN
             return formula;
         }
 
-        static string Implication(string formula, string symb)
+        static string Implication(string formula)
         {
             var sb = new StringBuilder(formula);
 
@@ -194,7 +196,7 @@ namespace fromLKN
             return formula;
         }
 
-        static string Equivalence(string formula, string symb)
+        static string Equivalence(string formula)
         {
             var sb = new StringBuilder(formula);
 
@@ -215,7 +217,7 @@ namespace fromLKN
             return formula;
         }
 
-        static string Sheffler(string formula, string symb)
+        static string Sheffler(string formula)
         {
             var sb = new StringBuilder(formula);
 
@@ -236,7 +238,7 @@ namespace fromLKN
             return formula;
         }
 
-        static string Pirs(string formula, string symb)
+        static string Pirs(string formula)
         {
             var sb = new StringBuilder(formula);
 
@@ -256,7 +258,7 @@ namespace fromLKN
             return formula;
         }
 
-        static string XOR(string formula, string symb)
+        static string XOR(string formula)
         {
             var sb = new StringBuilder(formula);
 
@@ -277,6 +279,12 @@ namespace fromLKN
             return formula;
         }
 
+        /*END BLOCK WITH LOGICAL OPERATIONS*/
+
+
+        /*Return a result (0 or 1) for formula.
+        //Logical operations has a priority, so this method using foreach to check operations one by one.*/
+
         static string PositionByPriority (string formula)
         {
             int count = 0;
@@ -294,20 +302,12 @@ namespace fromLKN
                         {
                             for (int i = formula.IndexOf(symbol); i > -1; i = formula.IndexOf(symbol))
                             {
-
-                                //Console.WriteLine(formula);
                                 formula = GetResultForOperationsInFormula(formula, symbol);      
                                 count++;
                             }
                         }
                     }
                 }
-
-                /*if (c == symbol)
-                {
-                    Console.WriteLine($"{symbol}: {formula.IndexOf(symbol)}");
-                };*/
-
                 if (formula.Length == 3)
                 {
                     formula = GetResultForOperationsInFormula(formula, symbol);
@@ -316,6 +316,8 @@ namespace fromLKN
             return formula;
         }
 
+
+        /*Return DDNF for set*/
         static string DDNF(string formula, string vars)
         {
             var sb = new StringBuilder(formula);
@@ -346,6 +348,7 @@ namespace fromLKN
             return formula;
         }
 
+        /*Return DDNF for set*/
 
         static string DKNF(string formula, string vars)
         {
@@ -391,8 +394,9 @@ namespace fromLKN
             //¬, ˄, v, →, ⇔, ↑, ↓, ⊕
 
             string formula = "A⇔(B↑C)→B";   //"¬Av(B⇔C)→A"
-            Console.WriteLine(formula);
             string vars = GetVarsForSet(formula);
+
+            Console.WriteLine(formula);
             Console.WriteLine($"{vars}F");
 
             int countOfVars = vars.Length;
@@ -403,22 +407,22 @@ namespace fromLKN
             string dknf = DKNF(table, vars);
             string ddnf = DDNF(table, vars);
 
-            var dd = new StringBuilder(ddnf);
-            var dk = new StringBuilder(dknf);
+            var dd = new StringBuilder(ddnf); //StringBuilder for DDNF
+            var dk = new StringBuilder(dknf); //StringBuilder for DKNF
 
             dd.Clear();
             dk.Clear();
 
-
-
             for (int i = 0; i < countOfSet; i++)
             {
-                string set = GetASet(i, countOfVars);
+                string set = GetBinaryForm(i, countOfVars);
                 string formulaForSet = GetFormulaForSet(formula, vars, set);
+
                 var result = "";
                 var r = new StringBuilder(result);
                 var form = new StringBuilder(formulaForSet);
-                bool check = formulaForSet.Contains("(");
+
+                bool check = formulaForSet.Contains("("); //Check for brackets in formula
                 r.Clear();
                 string formula_test = form.ToString();
 
@@ -428,10 +432,12 @@ namespace fromLKN
                     {
                         formula_test = form.ToString();
                         check = formula_test.Contains("(");
+
                         result = Brackets(formula_test).ElementAtOrDefault(n);
                         r.Append(result);
                         r.Insert(0, "(");
                         r.Insert(r.Length, ")");
+
                         form.Replace(r.ToString(), PositionByPriority(result));
                         r.Clear();
                     }
